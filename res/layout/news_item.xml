@@ -15,7 +15,7 @@
         android:minLines="2"
         android:maxLines="4"
     	android:layout_below ="@id/news_item_title"
-    	android:textSize="8sp"/>
+    	android:textSize="12sp"/>
     <TextView
         android:id="@+id/news_item_source"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:maxLines="1"
     	android:layout_below ="@id/news_item_description"
     	android:layout_alignParentLeft="true"
-    	android:textSize="6sp"
+    	android:textSize="10sp"
     	/>
     <TextView
         android:id="@+id/news_item_time"
@@ -32,7 +32,7 @@
         android:maxLines="1"
     	android:layout_below ="@id/news_item_description"
     	android:layout_alignParentRight="true"
-    	android:textSize="6sp"
+    	android:textSize="10sp"
     	/>
     
 

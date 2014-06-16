@@ -1,11 +1,16 @@
 package supertank.ruonews.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 
-public class News {
+public class News implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static final String NEWS_ID ="news_id";
 	public static final String NEWS_TIME ="news_time";
 	public static final String NEWS_TITLE ="news_title";

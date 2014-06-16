@@ -12,8 +12,10 @@ import supertank.ruonews.R.menu;
 import supertank.ruonews.adapter.NewsListAdapter;
 import supertank.ruonews.model.Category;
 import supertank.ruonews.model.News;
+import supertank.ruonews.utils.Consts;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -36,7 +38,7 @@ public class MainActivity extends Activity {
 	
 	List<Category> mCategories;
 	Category mCurrentCategory;
-	List<News> mNewsList;
+	ArrayList<News> mNewsList;
 	News chosenNews;
 	
 	@Override
@@ -63,24 +65,25 @@ public class MainActivity extends Activity {
 			 String[] categorySplit = categoryArray[i].split("[|]");
 			Category category = new Category();
 			category.setCategoryId(Integer.parseInt(categorySplit[0]));
-			category.setCategoryNmae(categorySplit[1]);
+			category.setCategoryName(categorySplit[1]);
 			mCategories.add(category);
 			Log.i("supertank", category.toString());
 		}
 		 
 		 mCurrentCategory= mCategories.get(0);
-		 mNewsList = getNewsList();
+		 mNewsList = getNewsGeneralList();
 		 
 		 
 	}
 	
-	private List<News> getNewsList() {
+	private ArrayList<News> getNewsGeneralList() {
 		// TODO Auto-generated method stub
 		//stub data
-		List<News> newsList = new ArrayList<News>();
+		ArrayList<News> newsList = new ArrayList<News>();
 		for (int i = 0; i <10; i++) {
 			News news = new News() ;
-			news.setNewsTitle("title stub");
+			news.setNewsId(100+i);
+			news.setNewsTitle("title stub" +i );
 			news.setNewsDescription("description stub");
 			news.setNewsTime(new Date());
 			news.setNewsSource("New York Times");
@@ -105,7 +108,22 @@ public class MainActivity extends Activity {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				mCurrentCategory =  mGridAdapter.getItem(position);
-				Toast.makeText(MainActivity.this, mCurrentCategory.getCategoryNmae(), Toast.LENGTH_LONG).show();
+				Toast.makeText(MainActivity.this, mCurrentCategory.getCategoryName(), Toast.LENGTH_LONG).show();
+			}
+		});
+		
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				Intent detailIntent = new Intent(MainActivity.this, NewsDetailActivity.class);
+				detailIntent.putExtra(Consts.IntentExtra.POSITION, arg2);
+				//detailIntent.putExtra(Consts.IntentExtra.NEWS_GENERAL_LIST, mNewsList);
+				detailIntent.putExtra(Consts.IntentExtra.NEWS_GENERAL_LIST, mNewsList);
+				detailIntent.putExtra(Consts.IntentExtra.CATEGORY, mCurrentCategory);
+				startActivity(detailIntent);
 			}
 		});
 	}

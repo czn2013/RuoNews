@@ -1,11 +1,18 @@
 package supertank.ruonews.model;
 
+import java.io.Serializable;
 
 
-public class Category {
 
+public class Category implements Serializable {
+
+	/**
+	 * 
+	 */
+	
+	private static final long serialVersionUID = 1L;
 	private int categoryId;
-	private String categoryNmae;
+	private String categoryName;
 	
 	
 	public int getCategoryId() {
@@ -14,16 +21,16 @@ public class Category {
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
-	public String getCategoryNmae() {
-		return categoryNmae;
+	public String getCategoryName() {
+		return categoryName;
 	}
-	public void setCategoryNmae(String categoryNmae) {
-		this.categoryNmae = categoryNmae;
+	public void setCategoryName(String categoryNmae) {
+		this.categoryName = categoryNmae;
 	}
 	
 	@Override
 	public String toString() {
-		return  categoryNmae;
+		return  categoryName;
 	}
 	
 }
