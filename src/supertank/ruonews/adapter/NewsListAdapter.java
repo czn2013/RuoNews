@@ -5,6 +5,7 @@ import java.util.List;
 
 import supertank.ruonews.R;
 import supertank.ruonews.model.News;
+import supertank.ruonews.utils.DateTools;
 
 import android.content.Context;
 import android.view.View;
@@ -59,7 +60,7 @@ public class NewsListAdapter extends BaseAdapter {
 		viewHolder.title.setText(news.getNewsTitle());
 		viewHolder.description.setText(news.getNewsDescription());
 		viewHolder.source.setText("Source: " + news.getNewsSource());
-		viewHolder.time.setText(news.getNewsTime().toString());
+		viewHolder.time.setText(DateTools.getFormatDateTime(news.getNewsTime(),"yyyy-MM-dd HH:mm:ss"));
 		//Log.i("supertank", "newsListAdapter:" + news.toString());
 		return convertView;
 	}

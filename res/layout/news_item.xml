@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
     <TextView 
         android:id="@+id/news_item_title"
         android:layout_width="match_parent"
@@ -15,7 +16,7 @@
         android:minLines="2"
         android:maxLines="4"
     	android:layout_below ="@id/news_item_title"
-    	android:textSize="12sp"/>
+    	android:textSize="14sp"/>
     <TextView
         android:id="@+id/news_item_source"
         android:layout_width="wrap_content"
@@ -23,7 +24,7 @@
         android:maxLines="1"
     	android:layout_below ="@id/news_item_description"
     	android:layout_alignParentLeft="true"
-    	android:textSize="10sp"
+    	android:textSize="12sp"
     	/>
     <TextView
         android:id="@+id/news_item_time"
@@ -32,7 +33,7 @@
         android:maxLines="1"
     	android:layout_below ="@id/news_item_description"
     	android:layout_alignParentRight="true"
-    	android:textSize="10sp"
+    	android:textSize="12sp"
     	/>
     
 

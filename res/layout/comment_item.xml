@@ -21,6 +21,39 @@
         android:layout_height = "wrap_content"
         android:layout_below="@id/news_comment_poster"
         />
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/news_comment_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        >
+	    <ImageButton 
+	        android:id = "@+id/comment_item_like_btn"
+	        android:layout_width="wrap_content"
+        	android:layout_height = "wrap_content"
+        	android:src = "@drawable/like"
+        	/>
+	    <TextView 
+	        android:id = "@+id/comment_item_like"
+	        android:layout_width="wrap_content"
+        	android:layout_height = "wrap_content"
+        	android:gravity="center"
+        	android:layout_marginRight="10dp"/>
+	    <ImageButton
+	        android:id = "@+id/comment_item_dislike_btn" 
+	        android:layout_width="wrap_content"
+        	android:layout_height = "wrap_content"
+        	android:src = "@drawable/dislike"
+        	/>
+	    <TextView 
+	        android:id = "@+id/comment_item_dislike"
+	        android:layout_width="wrap_content"
+        	android:layout_height = "wrap_content"
+        	android:gravity="center"
+        	android:layout_marginRight="10dp"/>
+	    
+	</LinearLayout>
     
 
 </RelativeLayout>

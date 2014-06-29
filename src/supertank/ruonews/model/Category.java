@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class Category implements Serializable {
 
+	public static final String CATEGORY_ID = "cid";
+	public static final String CATEGORY_NAME = "title";
 	/**
 	 * 
 	 */

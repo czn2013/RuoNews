@@ -12,4 +12,17 @@
         <item>9|游戏</item>
         <item>10|女人</item>
     </string-array>
+    
+    <string-array  name = "categories_en">
+        <item>1|Focus</item>
+        <item>2|Deomestic</item>
+        <item>3|International</item>
+        <item>4|Military</item>
+        <item>5|Sport</item>
+        <item>6|Tech</item>
+        <item>7|Car</item>
+        <item>8|Finance</item>
+        <item>9|Games</item>
+        <item>10|Woman</item>
+    </string-array>
 </resources>

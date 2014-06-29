@@ -25,7 +25,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="5.0dip"
 			android:maxLength="500" 
-			android:text="非常好的新闻"/>
+			android:text="Very good News!"/>
 		<ImageView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
 			android:layout_height="wrap_content"
 			android:background="@drawable/news_reply_post_btn_selector"
 			android:layout_marginRight="10.0dip"
-			android:text="发表" />
+			android:text="Post" />
 	</LinearLayout>
 	<LinearLayout
 		android:id="@+id/news_reply_img_layout"

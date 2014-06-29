@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:padding="@dimen/activity_horizontal_margin"
+     >
     <ListView 
         android:id = "@id/android:list"
         android:layout_width="match_parent"
         android:layout_height= "match_parent"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
+        android:padding= "@dimen/activity_horizontal_margin"
         ></ListView>
     <include 
-        android:id="@+id/comment_reply"
+        android:id="@+id/comment_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height= "wrap_content"
+        android:layout_alignParentBottom="true"
         layout= "@layout/bottom_bar"
         />
-    
-    
-
-</LinearLayout>
+</RelativeLayout>

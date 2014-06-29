@@ -8,7 +8,15 @@ public class Comment {
 	private String commentPoster;
 	private String commentContent;
 	private Date commentTime;
+	private int supportCount;
+	private int opposeCount;
 	
+	public int getOpposeCount() {
+		return opposeCount;
+	}
+	public void setOpposeCount(int opposeCount) {
+		this.opposeCount = opposeCount;
+	}
 	public int getCommentId() {
 		return commentId;
 	}
@@ -39,6 +47,12 @@ public class Comment {
 		return "Comment [commentId=" + commentId + ", commentPoster="
 				+ commentPoster + ", commentContent=" + commentContent
 				+ ", commentTime=" + commentTime + "]";
+	}
+	public int getSupportCount() {
+		return supportCount;
+	}
+	public void setSupportCount(int supportCount) {
+		this.supportCount = supportCount;
 	}
 	
 	

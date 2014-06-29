@@ -16,6 +16,7 @@ public final class R {
     }
     public static final class array {
         public static final int categories=0x7f050000;
+        public static final int categories_en=0x7f050001;
     }
     public static final class attr {
     }
@@ -30,48 +31,56 @@ public final class R {
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int ic_menu_refresh=0x7f020001;
-        public static final int news_collect_btn=0x7f020002;
-        public static final int news_collect_btn_press=0x7f020003;
-        public static final int news_collect_btn_selector=0x7f020004;
-        public static final int news_detail_comments=0x7f020005;
-        public static final int news_reply_img_btn_background=0x7f020006;
-        public static final int news_reply_layout_background=0x7f020007;
-        public static final int news_reply_layout_divider=0x7f020008;
-        public static final int news_reply_post_btn_down=0x7f020009;
-        public static final int news_reply_post_btn_selector=0x7f02000a;
-        public static final int news_reply_post_btn_up=0x7f02000b;
-        public static final int news_share_btn=0x7f02000c;
-        public static final int news_share_btn_press=0x7f02000d;
-        public static final int news_share_btn_selector=0x7f02000e;
+        public static final int dislike=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int ic_menu_refresh=0x7f020002;
+        public static final int like=0x7f020003;
+        public static final int news_collect_btn=0x7f020004;
+        public static final int news_collect_btn_press=0x7f020005;
+        public static final int news_collect_btn_selector=0x7f020006;
+        public static final int news_detail_comments=0x7f020007;
+        public static final int news_reply_img_btn_background=0x7f020008;
+        public static final int news_reply_layout_background=0x7f020009;
+        public static final int news_reply_layout_divider=0x7f02000a;
+        public static final int news_reply_post_btn_down=0x7f02000b;
+        public static final int news_reply_post_btn_selector=0x7f02000c;
+        public static final int news_reply_post_btn_up=0x7f02000d;
+        public static final int news_share_btn=0x7f02000e;
+        public static final int news_share_btn_press=0x7f02000f;
+        public static final int news_share_btn_selector=0x7f020010;
     }
     public static final class id {
-        public static final int action_comments=0x7f0a0018;
-        public static final int action_refresh=0x7f0a0017;
-        public static final int comment_reply=0x7f0a0000;
+        public static final int action_comments=0x7f0a001e;
+        public static final int action_refresh=0x7f0a001d;
+        public static final int comment_bottom_bar=0x7f0a0000;
+        public static final int comment_item_dislike=0x7f0a0018;
+        public static final int comment_item_dislike_btn=0x7f0a0017;
+        public static final int comment_item_like=0x7f0a0016;
+        public static final int comment_item_like_btn=0x7f0a0015;
         public static final int main_gv_category=0x7f0a0002;
         public static final int main_ll_category=0x7f0a0001;
         public static final int main_lv_newslist=0x7f0a0003;
-        public static final int news_collect_btn=0x7f0a000f;
-        public static final int news_comment_content=0x7f0a0012;
-        public static final int news_comment_poster=0x7f0a0010;
-        public static final int news_comment_time=0x7f0a0011;
-        public static final int news_detail_body=0x7f0a0007;
-        public static final int news_detail_source=0x7f0a0005;
-        public static final int news_detail_time=0x7f0a0006;
-        public static final int news_detail_title=0x7f0a0004;
-        public static final int news_item_description=0x7f0a0014;
-        public static final int news_item_source=0x7f0a0015;
-        public static final int news_item_time=0x7f0a0016;
-        public static final int news_item_title=0x7f0a0013;
-        public static final int news_reply_edit_layout=0x7f0a0009;
-        public static final int news_reply_edittext=0x7f0a000a;
-        public static final int news_reply_img_btn=0x7f0a000d;
-        public static final int news_reply_img_layout=0x7f0a000c;
-        public static final int news_reply_layout=0x7f0a0008;
-        public static final int news_reply_post=0x7f0a000b;
-        public static final int news_share_btn=0x7f0a000e;
+        public static final int news_collect_btn=0x7f0a0011;
+        public static final int news_comment_content=0x7f0a0014;
+        public static final int news_comment_poster=0x7f0a0012;
+        public static final int news_comment_time=0x7f0a0013;
+        public static final int news_detail_body=0x7f0a0008;
+        public static final int news_detail_bottom_bar=0x7f0a0009;
+        public static final int news_detail_source=0x7f0a0006;
+        public static final int news_detail_time=0x7f0a0007;
+        public static final int news_detail_title=0x7f0a0005;
+        public static final int news_detail_title_section=0x7f0a0004;
+        public static final int news_item_description=0x7f0a001a;
+        public static final int news_item_source=0x7f0a001b;
+        public static final int news_item_time=0x7f0a001c;
+        public static final int news_item_title=0x7f0a0019;
+        public static final int news_reply_edit_layout=0x7f0a000b;
+        public static final int news_reply_edittext=0x7f0a000c;
+        public static final int news_reply_img_btn=0x7f0a000f;
+        public static final int news_reply_img_layout=0x7f0a000e;
+        public static final int news_reply_layout=0x7f0a000a;
+        public static final int news_reply_post=0x7f0a000d;
+        public static final int news_share_btn=0x7f0a0010;
     }
     public static final class layout {
         public static final int activity_comment=0x7f030000;

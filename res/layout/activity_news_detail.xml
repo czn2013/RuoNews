@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin" >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/news_detail_title_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:padding="@dimen/activity_horizontal_margin" >
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/news_detail_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/news_detail_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/news_detail_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/news_detail_title"
+            android:maxLines="1"
+            android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/news_detail_source"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/news_detail_title"
-                android:maxLines="1"
-                android:textSize="12sp" />
+        <TextView
+            android:id="@+id/news_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/news_detail_title"
+            android:maxLines="1"
+            android:textSize="12sp" />
+    </RelativeLayout>
 
-            <TextView
-                android:id="@+id/news_detail_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/news_detail_title"
-                android:maxLines="1"
-                android:textSize="12sp" />
-        </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/news_detail_title_section"
+        android:layout_marginBottom="40dp" >
 
         <ViewFlipper
             android:id="@+id/news_detail_body"
@@ -44,6 +48,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp" >
         </ViewFlipper>
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+    <include
+        android:id="@+id/news_detail_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_bar" />
+
+</RelativeLayout>
